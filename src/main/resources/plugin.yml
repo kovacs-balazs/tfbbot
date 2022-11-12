@@ -1,0 +1,46 @@
+name: TFBDiscord
+version: '${project.version}'
+main: me.koba1.tfbdiscord.Main
+api-version: 1.18
+authors: [ kbalu ]
+description: Discord bot
+depend:
+  - LuckPerms
+
+commands:
+  discord:
+    aliases: [ dc, dsc ]
+  hub:
+    aliases: [ lobby ]
+  webshop:
+    aliases: [ ws, webs, wshop, website, weboldal, web, site, shop ]
+  debugstick:
+    aliases: [ debugs, dstick, ds ]
+  barrier:
+  itemframe:
+    aliases: [ if, itemf, iframe ]
+  video:
+    permission: youtube.use
+  stream:
+    permission: youtube.use
+  room:
+
+permissions:
+  plot.room.use:
+    description: telek room use
+    default: op
+  youtube.use:
+    description: youtuber shout use
+    default: op
+  plotscmd.use.bypass:
+    description: telek cmd bypass
+    default: op
+  blockedpl.bypass:
+    description: pl bypass
+    default: op
+  hub.teleport.other:
+    description: hub teleport cd bypass
+    default: op
+  discordothers.*:
+    children: [ plot.room.use, youtube.use, plotscmd.use.bypass, blockedpl.bypass, hub.teleport.other]
+    default: op
